@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #15171e;
+}
+
+* {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+select, option {
+    cursor: pointer;
+}
+
+a,
+button {
+    transition: 0.2s;
+    cursor: pointer;
+}
