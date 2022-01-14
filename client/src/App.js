@@ -14,27 +14,36 @@ import Bg1 from "./images/wow-background-01.jpg";
 import Bg2 from "./images/wow-background-02.jpg";
 import Bg3 from "./images/wow-background-03.jpg";
 import Bg4 from "./images/wow-background-04.jpg";
+import Bg5 from "./images/wow-background-05.jpg";
+import Bg6 from "./images/wow-background-06.jpg";
 
 import styled, { ThemeProvider } from "styled-components";
 
-const Bgs = [Bg1, Bg2, Bg3, Bg4];
+// Background images
+const Bgs = [Bg1, Bg2, Bg3, Bg4, Bg5, Bg6];
 
+// Set background image
 const backgroundImage = Bgs[Math.floor(Math.random() * Bgs.length)];
 
 const theme = {
-    bgColor: "#15171e",
-    textColor: "#fefefe",
-    textLink: "#148eff",
-    textLinkHover: "#7abfff",
-    btnColor: "#0074e0",
-    btnHover: "#47a6ff",
+    // Colours
+    bgColor: "rgba(21, 23, 30, 0.7)",
+    white: "#fefefe",
     brown: "#211510",
     yellow: "#f8b700",
     yellowDark: "#b1997f",
     yellowLight: "#ebdec2",
-    blueDark: "#003f7a",
+    blue: "#006fb2",
+    blueDark: "#00629e",
+    blueLight: "#007bc6",
+
+    // Animation
+    transition: "0.2s",
+
+    // Breakpoints
     mobile: "320px",
     tablet: "768px",
+    laptop: "1920px",
     desktop: "2560px",
 };
 
@@ -46,7 +55,7 @@ const Wrapper = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgba(21, 23, 30, 0.7);
+    background-color: ${theme.bgColor};
     background-blend-mode: color;
     background-attachment: fixed;
 `;

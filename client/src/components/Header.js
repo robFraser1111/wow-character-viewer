@@ -8,36 +8,21 @@ const Wrapper = styled.header`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: ${(props) => props.theme.textColor};
-
-    h1 {
-        align-self: center;
-        font-size: 2rem;
-    }
+    color: ${(props) => props.theme.white};
 `;
 
 const Items = styled.section`
-    max-width: 1920px;
+    max-width: ${(props) => props.theme.laptop};
     display: flex;
     align-items: center;
-    max-width: 1920px;
     width: 100%;
     justify-content: space-between;
-
-    img {
-        width: 100%;
-        transition: 0.2s;
-    }
-
-    img:hover, img: focus {
-        opacity: 0.8;
-    }
 
     h1 {
         margin-bottom: 8px;
     }
 
-    h4 {
+    p {
         margin-top: 8px;
         margin-left: 40px;
         font-weight: 600;
@@ -53,24 +38,32 @@ const Right = styled.div`
 `;
 
 const Item = styled.section`
-    max-width: 1920px;
+    max-width: ${(props) => props.theme.laptop};
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1920px;
     width: 100%;
     justify-content: center;
 `;
 
 const Logout = styled.a`
-    color: ${(props) => props.theme.textColor};
-    border: 1px solid ${(props) => props.theme.textColor};
+    color: ${(props) => props.theme.white};
+    border: 1px solid ${(props) => props.theme.white};
     padding: 10px 20px;
 
     &:hover,
     &:focus {
         color: ${(props) => props.theme.bgColor};
-        background-color: ${(props) => props.theme.textColor};
+        background-color: ${(props) => props.theme.white};
+    }
+`;
+
+const Logo = styled.img`
+    width: 100%;
+    transition: ${(props) => props.theme.transition};
+
+    &:hover, &: focus {
+        opacity: 0.8;
     }
 `;
 
@@ -83,7 +76,7 @@ const Header = (props) => {
                 <Item>
                     <div>
                         <a href={`${process.env.REACT_APP_DOMAIN}:3000`}>
-                            <img src={WowLogo} alt="WoW Logo" />
+                            <Logo src={WowLogo} alt="WoW Logo" />
                         </a>
                     </div>
                 </Item>
@@ -95,11 +88,18 @@ const Header = (props) => {
                 <Items>
                     <Left>
                         <a href={`${process.env.REACT_APP_DOMAIN}:3000`}>
-                            <img src={WowLogo} alt="WoW Logo" />
+                            <Logo src={WowLogo} alt="WoW Logo" />
                         </a>
-                        <h4>
-                            BattleTag: <b>{props.currentPlayer.battletag}</b>
-                        </h4>
+                        <p>
+                            {props.currentPlayer.battletag ? (
+                                <>
+                                    BattleTag:{" "}
+                                    <b>{props.currentPlayer.battletag}</b>
+                                </>
+                            ) : (
+                                ""
+                            )}
+                        </p>
                     </Left>
                     <Right>
                         <Logout

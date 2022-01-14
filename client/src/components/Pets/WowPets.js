@@ -9,7 +9,7 @@ const Pets = styled.section`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1920px;
+    max-width: ${(props) => props.theme.laptop};
 
     @media (min-width: ${(props) => props.theme.tablet}) {
         &:after {
@@ -51,15 +51,15 @@ const Text = styled.div`
 `;
 
 const Message = styled.h2`
-    color: ${(props) => props.theme.textColor};
+    color: ${(props) => props.theme.white};
     text-align: center;
 
     a {
-        color: ${(props) => props.theme.textLink}
+        color: ${(props) => props.theme.blue}
     }
 
     a:hover, a:focus {
-        color: ${(props) => props.theme.textLinkHover}
+        color: ${(props) => props.theme.blueLight}
 `;
 
 const WowPets = () => {
@@ -99,7 +99,7 @@ const WowPets = () => {
                 ))}
             </Pets>
         );
-    } else if (currentPets === "error" || typeof currentPets === 'object') {
+    } else if (currentPets === "error" || typeof currentPets === "object") {
         return (
             <Message>
                 Could not find any pets.

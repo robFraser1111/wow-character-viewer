@@ -4,8 +4,7 @@ import SpinnerImage from "../images/spinner-battlenet-01.png";
 import styled from "styled-components";
 
 const Form = styled.form`
-    color: ${(props) => props.theme.textColor};
-    font-size: 1.3rem;
+    color: ${(props) => props.theme.white};
 `;
 
 const Select = styled.div`
@@ -23,25 +22,24 @@ const Select = styled.div`
     select {
         width: 100%;
         padding: 10px 5px;
-        color: ${(props) => props.theme.textColor};
+        color: ${(props) => props.theme.white};
         background-color: ${(props) => props.theme.bgColor};
-        border: 1px solid ${(props) => props.theme.textColor};
+        border: 1px solid ${(props) => props.theme.white};
     }
 `;
 
 const Button = styled.button`
-    background-color: ${(props) => props.theme.btnColor};
-    border: 0;
+    background-color: ${(props) => props.theme.blue};
+    border: 1px solid ${(props) => props.theme.blueLight};
     width: 360px;
-    height: 44px;
+    height: auto;
     padding: 10px 0;
-    color: ${(props) => props.theme.textColor};
-    font-size: 1.3rem;
+    color: ${(props) => props.theme.white};
     cursor: pointer;
 
     &:hover,
     &:focus {
-        background-color: ${(props) => props.theme.btnHover};
+        background-color: ${(props) => props.theme.blueLight};
     }
 
     &:active {
@@ -90,7 +88,7 @@ const LoginForm = (props) => {
     return (
         <Form action={`${process.env.REACT_APP_DOMAIN}:5000/oauth/battlenet`}>
             <Select>
-                <label htmlFor="region">Region: </label>
+                <label htmlFor="region"><h5>Region: </h5></label>
                 <select
                     name="region"
                     id="region"
@@ -107,7 +105,7 @@ const LoginForm = (props) => {
             </Select>
 
             <Select>
-                <label htmlFor="locale">Language: </label>
+                <label htmlFor="locale"><h5>Language: </h5></label>
                 <select
                     name="locale"
                     id="locale"
@@ -137,7 +135,7 @@ const LoginForm = (props) => {
                 value="Submit"
                 className={"loading-" + loading.toString()}
             >
-                <b>Login</b>
+                <h5>Login</h5>
                 <Spinner></Spinner>
             </Button>
         </Form>
