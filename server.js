@@ -9,9 +9,9 @@ const BnetStrategy = require("passport-bnet").Strategy;
 
 const BNET_ID = process.env.BNET_OAUTH_CLIENT_ID;
 const BNET_SECRET = process.env.BNET_OAUTH_CLIENT_SECRET;
+const DOMAIN = process.env.DOMAIN;
 const OAUTH_CALLBACK_URL =
-    process.env.OAUTH_CALLBACK_URL ||
-    "http://localhost:5000/oauth/battlenet/callback";
+    process.env.OAUTH_CALLBACK_URL || `${DOMAIN}:5000/oauth/battlenet/callback`;
 // Review full list of available scopes here: https://develop.battle.net/documentation/guides/using-oauth
 const OAUTH_SCOPES = process.env.OAUTH_SCOPES || "wow.profile";
 
@@ -45,7 +45,7 @@ const app = express();
 // set up cors to allow us to accept requests from our client
 app.use(
     cors({
-        origin: "http://localhost:3000", // allow to server to accept request from different origin
+        origin: `${DOMAIN}:3000`, // allow to server to accept request from different origin
         methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
         credentials: true, // allow session cookie from browser to pass through
     })
@@ -71,10 +71,10 @@ app.get("/oauth/battlenet", passport.authenticate("bnet"));
 app.get(
     "/oauth/battlenet/callback",
     passport.authenticate("bnet", {
-        failureRedirect: "http://localhost:3000/",
+        failureRedirect: `${DOMAIN}:3000/`,
     }),
     function (req, res) {
-        res.redirect("http://localhost:3000/");
+        res.redirect(`${DOMAIN}:3000/`);
     }
 );
 
@@ -88,7 +88,7 @@ app.get("/api", function (req, res) {
 
 app.get("/logout", function (req, res) {
     req.logout();
-    res.redirect("http://localhost:3000/");
+    res.redirect(`${DOMAIN}:3000/`);
 });
 
 app.use(function (err, req, res, next) {
