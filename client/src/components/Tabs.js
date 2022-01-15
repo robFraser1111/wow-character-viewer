@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Section = styled.section`
     flex: content;
     margin: 40px 0;
+    text-align: center;
 
     .active {
         color: ${(props) => props.theme.brown};

@@ -27,7 +27,10 @@ const Footer = () => {
         <Wrapper>
             <p>
                 By{" "}
-                <a href="https://github.com/robFraser1111" target="_blank">
+                <a
+                    href="https://github.com/robFraser1111/wow-character-viewer"
+                    target="_blank"
+                >
                     Rob Fraser
                 </a>
                 , using the{" "}

@@ -93,8 +93,10 @@ const Header = (props) => {
                         <p>
                             {props.currentPlayer.battletag ? (
                                 <>
-                                    BattleTag:{" "}
-                                    <b>{props.currentPlayer.battletag}</b>
+                                    <small>
+                                        BattleTag:{" "}
+                                        <b>{props.currentPlayer.battletag}</b>
+                                    </small>
                                 </>
                             ) : (
                                 ""
