@@ -33,9 +33,9 @@ const theme = {
     yellow: "#f8b700",
     yellowDark: "#b1997f",
     yellowLight: "#ebdec2",
-    blue: "#006fb2",
+    blue: "#0074e0",
     blueDark: "#00629e",
-    blueLight: "#007bc6",
+    blueLight: "#47a6ff",
 
     // Animation
     transition: "0.2s",
@@ -80,8 +80,8 @@ const Section = styled.section`
 function App() {
     const currentPlayer = useFetch("/api");
 
-    const [region, setRegion] = useState("");
-    const [locale, setLocale] = useState("");
+    const [region, setRegion] = useState("us");
+    const [locale, setLocale] = useState("en_US");
     const [token, setToken] = useState("");
     const [tab, setTab] = useState("Characters");
 
@@ -89,11 +89,11 @@ function App() {
 
     // Set and Store Region and Locale in local storage so values don't get reset on page reload
     useEffect(() => {
-        if (localStorage.getItem("region") === "") {
+        if (localStorage.getItem("region") === null) {
             localStorage.setItem("region", "us");
         }
 
-        if (localStorage.getItem("locale") === "") {
+        if (localStorage.getItem("locale") === null) {
             localStorage.setItem("locale", "en_US");
         }
 
