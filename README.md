@@ -2,6 +2,16 @@
 
 World of Warcraft character viewer utilizing the battle.net API
 
+## Screenshots
+
+<img src="/client/public/screenshot-01.png?raw=true" alt="WoW Character Viewer screenshot" />
+
+<img src="/client/public/screenshot-02.png?raw=true" alt="WoW Character Viewer screenshot" />
+
+<img src="/client/public/screenshot-03.png?raw=true" alt="WoW Character Viewer screenshot" width="320" />
+
+<img src="/client/public/screenshot-04.png?raw=true" alt="WoW Character Viewer screenshot" width="320" />
+
 ## Installation
 
 Requires Node JS version 14 or higher - www.nodejs.org
