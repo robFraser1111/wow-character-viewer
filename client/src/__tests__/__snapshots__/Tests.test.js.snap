@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WoW Characters Characters render with correct data 1`] = `
+<div
+  className="sc-bqiRlB eXFHqo"
+>
+  <div
+    className="sc-crHmcD cGlLJg"
+  >
+    <div
+      className="sc-iqseJM hcnwtv"
+    >
+      <img
+        src="https://render.worldofwarcraft.com/us/character/barthilas/69/1-main.jpg"
+      />
+    </div>
+    <div
+      className="sc-egiyK iLOulL"
+    >
+      <h3>
+        Character-1
+      </h3>
+      <h4>
+        Realm: 
+        Character-1
+      </h4>
+      <p>
+        Level: 
+        1
+      </p>
+      <p>
+        Class: 
+        Rat Knight
+      </p>
+      <p>
+        Race: 
+        Rat
+      </p>
+      <p>
+        Gender: 
+        Female
+      </p>
+      <p>
+        Faction: 
+        Alliance
+      </p>
+    </div>
+  </div>
+  <div
+    className="sc-crHmcD cGlLJg"
+  >
+    <div
+      className="sc-iqseJM hcnwtv"
+    >
+      <img
+        src="https://render.worldofwarcraft.com/us/character/barthilas/69/1-main.jpg"
+      />
+    </div>
+    <div
+      className="sc-egiyK iLOulL"
+    >
+      <h3>
+        Bigdawg
+      </h3>
+      <h4>
+        Realm: 
+        Bigdawg
+      </h4>
+      <p>
+        Level: 
+        2
+      </p>
+      <p>
+        Class: 
+        Monk
+      </p>
+      <p>
+        Race: 
+        Pandaren
+      </p>
+      <p>
+        Gender: 
+        Male
+      </p>
+      <p>
+        Faction: 
+        Alliance
+      </p>
+    </div>
+  </div>
+</div>
+`;

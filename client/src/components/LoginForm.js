@@ -88,11 +88,13 @@ const LoginForm = (props) => {
     return (
         <Form action={`${process.env.REACT_APP_DOMAIN}:5000/oauth/battlenet`}>
             <Select>
-                <label htmlFor="region"><h5>Region: </h5></label>
+                <label htmlFor="region">
+                    <h5>Region: </h5>
+                </label>
                 <select
                     name="region"
                     id="region"
-                    value={user.region}
+                    value={user.region || ''}
                     onChange={props.regionHandler}
                     required
                 >
@@ -105,11 +107,13 @@ const LoginForm = (props) => {
             </Select>
 
             <Select>
-                <label htmlFor="locale"><h5>Language: </h5></label>
+                <label htmlFor="locale">
+                    <h5>Language: </h5>
+                </label>
                 <select
                     name="locale"
                     id="locale"
-                    value={user.locale}
+                    value={user.locale || ''}
                     onChange={props.localeHandler}
                     required
                 >

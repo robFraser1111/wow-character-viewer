@@ -87,7 +87,7 @@ function App() {
 
     const buttons = ["Mounts", "Characters", "Pets"];
 
-    // Set and Store Region and Locale in local storage so values don't get reset on page reload
+    // Set and Store Region, Locale and Token in local storage so values don't get reset on page reload
     useEffect(() => {
         if (localStorage.getItem("region") === null) {
             localStorage.setItem("region", "us");
@@ -96,6 +96,8 @@ function App() {
         if (localStorage.getItem("locale") === null) {
             localStorage.setItem("locale", "en_US");
         }
+
+        localStorage.setItem("token", "");
 
         setRegion(localStorage.getItem("region"));
         setLocale(localStorage.getItem("locale"));

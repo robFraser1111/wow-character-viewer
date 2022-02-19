@@ -70,7 +70,7 @@ const Logo = styled.img`
 const Header = (props) => {
     const user = useContext(UserContext);
 
-    if (user.token === "") {
+    if (user?.token === "") {
         return (
             <Wrapper>
                 <Item>
@@ -91,11 +91,11 @@ const Header = (props) => {
                             <Logo src={WowLogo} alt="WoW Logo" />
                         </a>
                         <p>
-                            {props.currentPlayer.battletag ? (
+                            {props?.currentPlayer?.battletag ? (
                                 <>
                                     <small>
                                         BattleTag:{" "}
-                                        <b>{props.currentPlayer.battletag}</b>
+                                        <b>{props?.currentPlayer?.battletag}</b>
                                     </small>
                                 </>
                             ) : (
