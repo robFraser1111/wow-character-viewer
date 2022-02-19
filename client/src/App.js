@@ -120,7 +120,7 @@ function App() {
 
     // Set token only if the call to the Api was successful
     useEffect(() => {
-        if (currentPlayer.hasOwnProperty("token")) {
+        if (currentPlayer?.hasOwnProperty("token")) {
             setToken(currentPlayer.token);
         } else {
             return;

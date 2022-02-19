@@ -1,5 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`WoW Characters Character render with correct data 1`] = `
+<div
+  className="sc-giYglK kgtxhA"
+>
+  <div
+    className="sc-iqseJM hcnwtv"
+  >
+    <img
+      src="https://render.worldofwarcraft.com/us/character/barthilas/69/1-main.jpg"
+    />
+  </div>
+  <div
+    className="sc-ezbkAF iugekb"
+  >
+    <h3 />
+    <h4>
+      Realm: 
+    </h4>
+    <p>
+      Level: 
+    </p>
+    <p>
+      Class: 
+    </p>
+    <p>
+      Race: 
+    </p>
+    <p>
+      Gender: 
+    </p>
+    <p>
+      Faction: 
+    </p>
+  </div>
+</div>
+`;
+
+exports[`WoW Characters CharacterImage render with correct data 1`] = `
+<div
+  className="sc-bYoBSM lbqQMy"
+>
+  <img
+    src="https://render.worldofwarcraft.com/us/character/barthilas/69/1-main.jpg"
+  />
+</div>
+`;
+
 exports[`WoW Characters Characters render with correct data 1`] = `
 <div
   className="sc-bqiRlB eXFHqo"
@@ -89,4 +136,10 @@ exports[`WoW Characters Characters render with correct data 1`] = `
     </div>
   </div>
 </div>
+`;
+
+exports[`WoW Characters Image render with correct data 1`] = `
+<img
+  src="https://render.worldofwarcraft.com/us/character/barthilas/69/1-main.jpg"
+/>
 `;

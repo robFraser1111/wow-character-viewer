@@ -7,7 +7,15 @@ import ReactDOM from "react-dom";
 import App from "../App";
 import useFetch from "../hooks/useFetch";
 import WowCharacters from "../components/Characters/WowCharacters";
+import WowCharacter from "../components/Characters/WowCharacter";
+import WowCharacterImage from "../components/Characters/WowCharacterImage";
+import Image from "../components/Characters/Image";
+
+jest.mock("../hooks/useFetch");
 jest.mock("../components/Characters/WowCharacters");
+jest.mock("../components/Characters/WowCharacter");
+jest.mock("../components/Characters/WowCharacterImage");
+jest.mock("../components/Characters/Image");
 
 let data = {};
 
@@ -37,6 +45,21 @@ test("Footer renders correctly", () => {
 describe('WoW Characters', () => {
     test("Characters render with correct data", () => {
         const tree = renderer.create(<WowCharacters />).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
+    test("Character render with correct data", () => {
+        const tree = renderer.create(<WowCharacter />).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
+    test("CharacterImage render with correct data", () => {
+        const tree = renderer.create(<WowCharacterImage />).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
+    test("Image render with correct data", () => {
+        const tree = renderer.create(<Image />).toJSON();
         expect(tree).toMatchSnapshot();
     });
 })
