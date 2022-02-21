@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1a1f19c7.css",
+    "main.js": "/static/js/main.5c6ac6dc.js",
+    "static/js/787.070db070.chunk.js": "/static/js/787.070db070.chunk.js",
+    "static/media/wow-background-05.jpg": "/static/media/wow-background-05.5472639cd76b75c71b35.jpg",
+    "static/media/wow-background-06.jpg": "/static/media/wow-background-06.a3f04a8ada036624c200.jpg",
+    "static/media/wow-background-02.jpg": "/static/media/wow-background-02.24526e702a41ab761da1.jpg",
+    "static/media/wow-background-01.jpg": "/static/media/wow-background-01.b5d3ac829fce22b5b833.jpg",
+    "static/media/wow-background-04.jpg": "/static/media/wow-background-04.c3fc240f9e40bf7c35fb.jpg",
+    "static/media/wow-background-03.jpg": "/static/media/wow-background-03.84553d76b2f7fdf7ec6b.jpg",
+    "static/media/wow-logo-01.png": "/static/media/wow-logo-01.26f2a1c7c346c1cc7c8e.png",
+    "static/media/spinner-battlenet-01.png": "/static/media/spinner-battlenet-01.05dc587d0ed3475d332e.png",
+    "static/media/wow-placeholder-300-300-01.jpg": "/static/media/wow-placeholder-300-300-01.5f73666c5d97a48660d9.jpg",
+    "index.html": "/index.html",
+    "main.1a1f19c7.css.map": "/static/css/main.1a1f19c7.css.map",
+    "main.5c6ac6dc.js.map": "/static/js/main.5c6ac6dc.js.map",
+    "787.070db070.chunk.js.map": "/static/js/787.070db070.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a1f19c7.css",
+    "static/js/main.5c6ac6dc.js"
+  ]
+}
