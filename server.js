@@ -12,7 +12,8 @@ const BNET_ID = process.env.BNET_OAUTH_CLIENT_ID;
 const BNET_SECRET = process.env.BNET_OAUTH_CLIENT_SECRET;
 const DOMAIN = process.env.DOMAIN;
 const OAUTH_CALLBACK_URL =
-  process.env.OAUTH_CALLBACK_URL || `${DOMAIN}:${PORT || 5000}/oauth/battlenet/callback`;
+  process.env.OAUTH_CALLBACK_URL ||
+  `${DOMAIN}:${PORT || 5000}/oauth/battlenet/callback`;
 // Review full list of available scopes here: https://develop.battle.net/documentation/guides/using-oauth
 const OAUTH_SCOPES = process.env.OAUTH_SCOPES || "wow.profile";
 
@@ -100,3 +101,32 @@ app.use(function (err, req, res, next) {
 const server = app.listen(PORT || 5000, function () {
   console.log("Listening on port %d boyo", server.address().port);
 });
+
+// ** MIDDLEWARE ** //
+const whitelist = [
+  "http://localhost:3000",
+  "http://localhost:5000",
+  "https://wow-character-app.herokuapp.com/",
+];
+const corsOptions = {
+  origin: function (origin, callback) {
+    console.log("** Origin of request " + origin);
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
+      console.log("Origin acceptable");
+      callback(null, true);
+    } else {
+      console.log("Origin rejected");
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+};
+
+// ** SERVE CLIENT AS HOME PAGE ** //
+if (process.env.NODE_ENV === "production") {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, "client/build")));
+  // Handle React routing, return all requests to React app
+  app.get("*", function (req, res) {
+    res.sendFile(path.join(__dirname, "client/build", "index.html"));
+  });
+}
