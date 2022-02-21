@@ -111,7 +111,7 @@ const Header = (props) => {
           <Right>
             <Logout
               href={
-                `${process.env.REACT_APP_DOMAIN}/logout`}
+                `https://wow-character-app.herokuapp.com/logout`}
             >
               Logout
             </Logout>

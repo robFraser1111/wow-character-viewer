@@ -86,7 +86,7 @@ const LoginForm = (props) => {
   };
 
   return (
-    <Form action={`${process.env.REACT_APP_DOMAIN}/oauth/battlenet`}>
+    <Form action={`https://wow-character-app.herokuapp.com/oauth/battlenet`}>
       <Select>
         <label htmlFor="region">
           <h5>Region: </h5>

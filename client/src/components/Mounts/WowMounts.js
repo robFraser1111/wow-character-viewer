@@ -72,7 +72,7 @@ const WowMounts = () => {
         Try{" "}
         <a
           href={
-            `${process.env.REACT_APP_DOMAIN}/logout`}
+            `https://wow-character-app.herokuapp.com/logout`}
         >
           logging out
         </a>{" "}

@@ -71,7 +71,7 @@ const WowCharacters = () => {
                 Could not find any characters.
                 <br />
                 Try{" "}
-                <a href={`${process.env.REACT_APP_DOMAIN}/logout`}>
+                <a href={`https://wow-character-app.herokuapp.com/logout`}>
                     logging out
                 </a>{" "}
                 and choosing another <u>region</u>.
