@@ -40,8 +40,6 @@ const WowCharacters = () => {
         user.token
     );
 
-    console.log("Characters " + currentCharacters);
-
     if (currentCharacters.hasOwnProperty("wow_accounts")) {
         return (
             <Characters>
@@ -73,7 +71,7 @@ const WowCharacters = () => {
                 Could not find any characters.
                 <br />
                 Try{" "}
-                <a href={`${process.env.REACT_APP_DOMAIN}:5000/logout`}>
+                <a href={`${process.env.REACT_APP_DOMAIN}/logout`}>
                     logging out
                 </a>{" "}
                 and choosing another <u>region</u>.

@@ -22,9 +22,9 @@ const WowPet = (props) => {
     return (
         <Image>
             {petImage.hasOwnProperty("assets") ? (
-                <img src={petImage.assets[0].value} />
+                <img src={petImage.assets[0].value} alt="Pet"/>
             ) : (
-                <img src={Placeholder} />
+                <img src={Placeholder} alt="Placeholder pet"/>
             )}
         </Image>
     );

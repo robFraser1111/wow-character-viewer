@@ -75,7 +75,10 @@ const Header = (props) => {
       <Wrapper>
         <Item>
           <div>
-            <a href={`https://wow-character-app.herokuapp.com`}>
+            <a
+              href={
+                `/`}
+            >
               <Logo src={WowLogo} alt="WoW Logo" />
             </a>
           </div>
@@ -87,7 +90,10 @@ const Header = (props) => {
       <Wrapper>
         <Items>
           <Left>
-            <a href={`https://wow-character-app.herokuapp.com`}>
+            <a
+              href={
+                `/`}
+            >
               <Logo src={WowLogo} alt="WoW Logo" />
             </a>
             <p>
@@ -103,7 +109,10 @@ const Header = (props) => {
             </p>
           </Left>
           <Right>
-            <Logout href={`https://wow-character-app.herokuapp.com/logout`}>
+            <Logout
+              href={
+                `${process.env.REACT_APP_DOMAIN}/logout`}
+            >
               Logout
             </Logout>
           </Right>
