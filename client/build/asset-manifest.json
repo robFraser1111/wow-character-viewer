@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1a1f19c7.css",
-    "main.js": "/static/js/main.5c6ac6dc.js",
+    "main.js": "/static/js/main.0943fd7d.js",
     "static/js/787.070db070.chunk.js": "/static/js/787.070db070.chunk.js",
     "static/media/wow-background-05.jpg": "/static/media/wow-background-05.5472639cd76b75c71b35.jpg",
     "static/media/wow-background-06.jpg": "/static/media/wow-background-06.a3f04a8ada036624c200.jpg",
@@ -14,11 +14,11 @@
     "static/media/wow-placeholder-300-300-01.jpg": "/static/media/wow-placeholder-300-300-01.5f73666c5d97a48660d9.jpg",
     "index.html": "/index.html",
     "main.1a1f19c7.css.map": "/static/css/main.1a1f19c7.css.map",
-    "main.5c6ac6dc.js.map": "/static/js/main.5c6ac6dc.js.map",
+    "main.0943fd7d.js.map": "/static/js/main.0943fd7d.js.map",
     "787.070db070.chunk.js.map": "/static/js/787.070db070.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1a1f19c7.css",
-    "static/js/main.5c6ac6dc.js"
+    "static/js/main.0943fd7d.js"
   ]
 }
