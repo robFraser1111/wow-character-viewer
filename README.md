@@ -2,6 +2,8 @@
 
 World of Warcraft character viewer utilizing the battle.net API
 
+Live version can be found @ <a href="https://wow-character-app.herokuapp.com/" target="_blank">https://wow-character-app.herokuapp.com/</a>
+
 ## Screenshots
 
 <img src="/client/public/screenshot-01.png?raw=true" alt="WoW Character Viewer screenshot" />
