@@ -1,6 +1,5 @@
 require("dotenv").config();
 
-var indexRouter = require("./routes/index");
 const path = require("path");
 const express = require("express");
 const cors = require("cors");
@@ -108,8 +107,6 @@ const server = app.listen(PORT || 5000, function () {
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, "client/build")));
 // --------------------------------
-
-app.use("/", indexRouter);
 
 // ---------------- ADD THIS ----------------
 // The "catchall" handler: for any request that doesn't
