@@ -22,7 +22,8 @@ Node modules need to be installed at the root directory and in the client direct
 
 Battle.net ID and SECRET can be obtained by following the official documentation - develop.battle.net/documentation
 
-.env file at the root directory needs to be updated with your Battle.net ID and SECRET
+.env file at the root directory needs to be updated with your Battle.net ID and SECRET and the correct domain for deployment
+.env file in client directory also needs to be updated with the correct domain for deployment
 
 ## Usage
 
