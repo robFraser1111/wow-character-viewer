@@ -2,6 +2,7 @@
   "name": "passport-bnet-examples-express",
   "version": "0.0.1",
   "scripts": {
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "client-install": "cd client && npm install",
     "start": "node server.js",
     "server": "nodemon server.js",
